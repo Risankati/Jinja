@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import os
 import jinja2
 import webapp2
@@ -36,7 +37,7 @@ class MainHandler(BaseHandler):
         vnos = int(self.request.get("stevilo"))
         rezultat = None
         if vnos == secret:
-            rezultat = {"izpis": "Uspelo ti je! H5!"}
+            rezultat = {"izpis": u"Uspelo ti je! Ves čas sem verjela vate!"}
         elif vnos > secret:
             rezultat = {"izpis": "Ha! Previsoko"}
         elif vnos < secret:
